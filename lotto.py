@@ -81,6 +81,9 @@ while True:
     btn50 = [  p for p in driver.find_elements(By.CSS_SELECTOR,'.price-button')][2]
     print(btn50.get_attribute('innerHTML'))
 
+    btn100 = [  p for p in driver.find_elements(By.CSS_SELECTOR,'.price-button')][3]
+    print(btn100.get_attribute('innerHTML'))
+
     print(lat_round_result)
     print(lat_round_guess)
 
@@ -116,7 +119,7 @@ while True:
 
         try:
             time.sleep(3)
-            btn20.click()
+            btn50.click()
             high_btn.click()
         except:
             pass
@@ -127,7 +130,7 @@ while True:
     elif len(dot_high) == 3:
         try:
             time.sleep(3)
-            btn20.click()
+            btn50.click()
             low_btn.click()
         except:
             pass         
@@ -137,7 +140,7 @@ while True:
     elif len(dot_low) == 4:  #D 4 
         try:
             time.sleep(3)
-            btn50.click()
+            btn100.click()
             high_btn.click()
             
         except: 
@@ -151,15 +154,37 @@ while True:
 
         try:
             time.sleep(3)
-            btn50.click()
+            btn100.click()
             low_btn.click()
             
         except: 
             pass
 
         print("Guess Low")
-           
 
+    elif len(dot_high) == 5: #H 4
+
+        try:
+            time.sleep(3)
+            btn100.click()
+            low_btn.click()
+            
+        except: 
+            pass
+
+        print("Guess Low")           
+
+    elif len(dot_low) == 5: #H 4
+
+        try:
+            time.sleep(3)
+            btn100.click()
+            high_btn.click()
+            
+        except: 
+            pass
+
+        print("Guess Low")   
 
 
 print('hehe')
